@@ -15,7 +15,7 @@ else
 	exit 1
 fi
 
-if [[ "$SERVER_KEY" == "-----BEGIN PRIVATE KEY-----"* ]]; then
+if [[ "$SERVER_KEY" == "-----BEGIN PRIVATE KEY-----"* ]] || [[ "$SERVER_KEY" == "-----BEGIN RSA PRIVATE KEY-----"* ]]; then
 	echo "$SERVER_KEY" > /etc/rabbitmq/server.key
 else
 	echo "Missing Server Key (SERVER_KEY) environment variable or invalid key was set!"
