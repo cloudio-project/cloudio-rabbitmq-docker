@@ -1,7 +1,7 @@
-FROM rabbitmq:3.7.26-alpine
+FROM rabbitmq:3.9.22-management-alpine
 
-ADD rabbitmq_auth_backend_amqp-20171201-3.7.x.ez /opt/rabbitmq/plugins/
-RUN rabbitmq-plugins enable --offline rabbitmq_auth_backend_amqp rabbitmq_auth_backend_cache rabbitmq_auth_mechanism_ssl rabbitmq_management rabbitmq_mqtt
+ADD rabbitmq_auth_backend_amqp-v3.9.0.ez /opt/rabbitmq/plugins/
+RUN rabbitmq-plugins enable --offline rabbitmq_auth_backend_amqp rabbitmq_auth_backend_cache rabbitmq_auth_mechanism_ssl rabbitmq_mqtt
 
 ADD rabbitmq-env.conf /etc/rabbitmq/
 ADD rabbitmq.conf /etc/rabbitmq/
