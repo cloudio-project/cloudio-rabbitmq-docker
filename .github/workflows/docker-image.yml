@@ -24,4 +24,4 @@ jobs:
       - name: Build
         run: |
           docker login
-          docker build --platform linux/amd64,linux/arm64,linux/arm --tag cloudio/cloudio-rabbitmq:$GITHUB_REF_NAME --tag cloudio/cloudio-rabbitmq:latest --push .
+          docker build --platform linux/amd64,linux/arm --tag cloudio/cloudio-rabbitmq:$GITHUB_REF_NAME --tag cloudio/cloudio-rabbitmq:latest --push .
